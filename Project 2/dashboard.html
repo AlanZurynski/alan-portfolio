@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="container">
+  
+  <header>
+    <div class="logo">REK.</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+    </nav>
+    <div class="nav1">
+      <a href="login.html" class="btn btn2">Uitloggen</a>
+    </div>
+  </header>
+
+  <div class="dashboard-grid">
+
+    <aside class="sidebar">
+      
+      <h3>Nieuwe rekening</h3>
+      <button id="toggleFormBtn" class="btn btn1 sidebar-btn">Toevoegen</button>
+
+      <form id="addAccountForm" class="sidebar-form">
+        <input type="text" id="newAccName" placeholder="Naam rekening" class="input" required>
+        <input type="number" id="newAccBalance" placeholder="Startsaldo (€)" class="input" required>
+        <button class="btn btn1">Opslaan</button>
+      </form>
+
+      <h3 class="mt">Overboeken</h3>
+      <form id="transferForm" class="sidebar-form">
+        <select id="fromAccount" class="input"></select>
+        <select id="toAccount" class="input"></select>
+        <input type="number" id="transferAmount" placeholder="Bedrag (€)" class="input">
+        <button class="btn btn1">Versturen</button>
+        <p id="transferError" class="error"></p>
+      </form>
+
+      <div id="transferSuccess" class="success">Transactie geslaagd</div>
+    </aside>
+
+    <main class="main">
+      <h1>Uw rekeningen</h1>
+      
+      <div id="accountListContainer" class="account-list"></div>
+
+      <section class="transactions">
+        <div class="transactions-header">
+          <h2>Transactiegeschiedenis</h2>
+          
+          <div class="filters">
+            <select id="filterType" class="input">
+              <option value="all">Alle types</option>
+              <option value="inkomend">Inkomend</option>
+              <option value="uitgaand">Uitgaand</option>
+            </select>
+
+            <select id="filterDate" class="input">
+              <option value="newest">Nieuwste eerst</option>
+              <option value="oldest">Oudste eerst</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="transactionList" class="transaction-list"></div>
+      </section>
+
+      <section class="crypto-section">
+        <h2>Beleggingen</h2>
+
+        <p class="cyrpto-balance">Beschikbaar saldo: € <span id="cashBalance">0.00</span></p>
+
+        <label>Kies een categorie:</label>
+        <select id="categorySelect" class="input">
+          <option value="">kies</option>
+          <option value="aandelen">Aandelen</option>
+          <option value="crypto">Crypto</option>
+        </select>
+
+        <label>Kies een product:</label>
+        <select id="productSelect" class="input" disabled></select>
+
+        <p><strong>Huidige prijs:</strong> € <span id="currentPrice">0.00</span></p>
+        <p>In bezit: <span id="ownedAmount">0</span> eenheden</p>
+
+        <input type="number" id="investValue" class="input" placeholder="Bedrag (€)">
+
+        <div class="crypto-buttons">
+          <button id="buyBtn" class="btn btn-green">Kopen</button>
+          <button id="sellBtn" class="btn btn-green">Verkopen</button>
+        </div>
+
+        <p id="investMessage" class="error"></p>
+      </section>
+
+      <section class="crypto-section">
+        <h2>Cryptovaluta Overzicht</h2>
+        
+        <p class="crypto-balance">Beschikbaar saldo: <span id="cryptoCashDisplay">€ 0.00</span></p>
+
+        <div id="cryptoList" class="crypto-list"></div>
+
+        <div class="crypto-controls">
+          <label>Kies een cryptovaluta:</label>
+          <select id="cryptoSelect" class="input"></select>
+
+          <label>Bedrag (in €):</label>
+          <input type="number" id="cryptoAmount" class="input" placeholder="100" value="100">
+
+          <div class="crypto-buttons">
+            <button id="btnBuyCrypto" class="btn btn-green">Kopen</button>
+            <button id="btnSellCrypto" class="btn btn-green">Verkopen</button>
+          </div>
+        </div>
+
+        <p id="cryptoFeedback" class="crypto-msg"></p>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

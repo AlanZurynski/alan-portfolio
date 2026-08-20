@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Over mij - Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">Project</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <div class="dropdown">
+        <a href="overmij.html">Over mij ▾</a>
+      <div class="dropdown-content">
+       <a href="contact.html">Neem contact op</a>
+      </div>
+  </div>
+    <a href="bsa.html">BSA</a>
+    <a href="examenplan.html">Examenplan</a>
+    <a href="eduarte.html">EduArte</a>
+    <a href="canvas.html">Canvas</a>
+  </nav>
+</header>
+
+    <section class="contact">
+      <h2>Neem contact op</h2>
+      <form action="#" method="post">
+        <label>Naam:
+          <input type="text" name="naam" required>
+        </label>
+
+        <label>E-mail:
+          <input type="email" name="email" required>
+        </label>
+
+        <label>Telefoonnummer:
+          <input type="tel" name="telefoon">
+        </label>
+
+        <label>Onderwerp:
+          <input type="text" name="onderwerp" required>
+        </label>
+
+        <label>Bericht:
+          <textarea name="bericht" rows="4" required></textarea>
+        </label>
+
+        <label>Soort bericht:
+          <select name="soort">
+            <option value="vraag">Vraag</option>
+            <option value="opmerking">Opmerking</option>
+            <option value="anders">Anders</option>
+          </select>
+        </label>
+
+        <label>
+          <input type="checkbox" name="nieuwsbrief"> Ik wil de nieuwsbrief ontvangen
+        </label>
+
+        <button type="submit" class="btn primary">Verstuur</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <p>Jan Ligthartstraat 250, 3083 AM Rotterdam</p>
+      <p>Email: <a href="mailto:9019091@student.zadkine.nl">9019091@student.zadkine.nl</a></p>
+      <p>Website voor mijn schoolproject</p>
+    </div>
+    <p>&copy; 2025 Alan Zurynski</p>
+  </footer>
+
+</body>
+</html>

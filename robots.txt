@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+ 
+# Sitemap locatie voor zoekmachines
+Sitemap: https://alanzurynski.nl/sitemap.xml

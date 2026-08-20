@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter;
+  line-height: 1.6;
+  background: #111;
+  color: white;
+}
+
+header {
+  background: #1a1a1a;
+  text-align: center;
+  padding: 2.5rem 2rem 1.5rem;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+header h1 {
+  font-family: Share Tech Mono;
+  font-size: 2.8rem;
+  color: #7ec8e3;
+}
+
+header p {
+  color: #9370db;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+
+/* NAV */
+nav {
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+}
+
+/* MAIN */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background: #555;
+}
+
+section.dark {
+  background: #1a1a1a;
+}
+
+section h2 {
+  font-family: Share Tech Mono;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+#projecten .grid,
+#contact .grid {
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  justify-content: center;
+}
+
+/* ARTICLE */
+#kennis article,
+#projecten article {
+  background: #c0c0c0;
+  color: #1a1a1a;
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+#projecten article {
+  background: #f5f5f5;
+}
+
+.icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+article h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+#opleidingen article {
+  background: #2a2a2a;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+#opleidingen article:last-child {
+  margin-bottom: 0;
+}
+
+#opleidingen h3 {
+  color: #9370db;
+  margin-bottom: 0.25rem;
+}
+
+.badge {
+  font-size: 0.78rem;
+  color: #aaa;
+  padding: 0.15rem 0.5rem;
+  border-radius: 99px;
+  margin-left: 0.5rem;
+}
+
+.school {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+#contact article {
+  background: #555;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#contact h3 {
+  color: #9370db;
+  font-family: Share Tech Mono;
+  margin-bottom: 1rem;
+}
+
+#contact article p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: left;
+}
+
+label {
+  color: #ccc;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+input, textarea {
+  padding: 0.65rem;
+  border: 2px solid #666;
+  border-radius: 5px;
+  background: #3a3a3a;
+  color: white;
+  font-family: Inter;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background: #9370db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  align-self: flex-start;
+}
+
+/* FOOTER */
+footer {
+  background: #1a1a1a;
+  color: #888;
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #2a2a2a;
+}
+
+footer nav {
+  margin-top: 0.75rem;
+  border: none;
+  background: none;
+}
+
+footer a {
+  color: #9370db;
+  font-size: 0.85rem;
+}
+
+footer a:hover {
+  color: #b19cd9;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* @media tablet en mobiel */
+/* genestelde elementen */
+/* & manier 1 - &:hover op navigatielink */
+/* & manier 2 - &:hover op button */
+/* & manier 3 - &:active op button */
+nav a:hover {
+  background: #333;
+  color: white;
+}
+
+/* hover effect op kennis en projectenkaarten */
+#kennis article:hover, #projecten article:hover {
+  transform: translateY(-3px);
+  transition: transform 0.2s;
+}
+
+/* focus op formuliervelden */
+#contact form input:focus, #contact form textarea:focus {
+  outline: none;
+  border-color: #9370db;
+}
+#contact form button:hover {
+  background: #7952b3;
+}
+#contact form button:active {
+  opacity: 0.8;
+}
+
+/* @media - tablet */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  footer nav {
+    position: static;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  #contact .grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* @media - mobiel */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  main {
+    padding: 1rem;
+  }
+  section {
+    padding: 1.25rem;
+  }
+  button {
+    align-self: stretch;
+  }
+}

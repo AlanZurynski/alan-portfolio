@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Zurynski – Fullstack Developer Portfolio | HTML, CSS, JavaScript, PHP</title>
+    <meta name="description" content="Portfolio van Alan Zurynski, fullstack developer uit Nederland. Bekijk mijn vaardigheden in HTML, CSS, JavaScript en PHP en neem contact op.">
+    <meta name="keywords" content="Alan Zurynski, fullstack developer, portfolio, HTML, CSS, JavaScript, PHP, Nederland, MBO developer">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://alanzurynski.nl/">
+    <meta property="og:title" content="Alan Zurynski – Fullstack Developer Portfolio">
+    <meta property="og:description" content="Portfolio van Alan Zurynski, fullstack developer uit Nederland. HTML, CSS, JavaScript en PHP.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alanzurynski.nl/">
+    <meta property="og:locale" content="nl_NL">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Alan Zurynski</h1>
+        <p>Software developer</p>
+    </header>
+
+    <nav aria-label="Hoofdnavigatie">
+        <a href="#kennis">Kennis</a>
+        <a href="#opleidingen">Opleidingen</a>
+        <a href="#projecten">Projecten</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <section id="kennis" aria-labelledby="kennis-titel">
+            <h2 id="kennis-titel">Kennis</h2>
+            <div class="grid">
+                <article>
+                    <h3>HTML &amp; CSS</h3>
+                    <p>Responsive layouts, Flexbox, CSS Grid</p>
+                </article>
+                <article>
+                    <h3>JavaScript</h3>
+                    <p>Bouwen van interactieve websites</p>
+                </article>
+                <article>
+                    <h3>PHP</h3>
+                    <p>Backend ontwikkelen, verwerken van formulieren en basiskennis in databases</p>
+                </article>
+                <article>
+                    <h3>SQL &amp; Databases</h3>
+                    <p>MySQL, JOIN-queries en phpMyAdmin</p>
+                </article>
+                <article>
+                    <h3>GitHub</h3>
+                    <p>Commits en pull requests</p>
+                </article>
+                <article>
+                    <h3>UI / UX Design</h3>
+                    <p>Wireframes en Figma</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="opleidingen" class="dark" aria-labelledby="opleidingen-titel">
+            <h2 id="opleidingen-titel">Opleidingen</h2>
+            <article>
+                <h3>Software Developer <span class="badge">2025 – heden</span></h3>
+                <p class="school">TCR - MBO niveau 4</p>
+                <p>Ik heb geleerd om webapplicaties te bouwen met HTML, CSS, JavaScript en PHP.</p>
+            </article>
+            <article>
+                <h3>Medewerker ICT <span class="badge">2022 – 2024</span></h3>
+                <p class="school">TCR - MBO niveau 2</p>
+                <p>Ik heb basiskennis opgedaan van ICT en algemene vakken.</p>
+            </article>
+            <article>
+                <h3>VMBO-B diploma <span class="badge">2018 – 2022</span></h3>
+                <p class="school">VMBO basis</p>
+                <p>Profiel Economie met basiskennis van verschillende vakken.</p>
+            </article>
+        </section>
+
+        <section id="projecten" aria-labelledby="projecten-titel">
+            <h2 id="projecten-titel">Projecten</h2>
+            <div class="grid">
+                <a href="../Keuzedeel/Project/index.html" aria-label="Bekijk het Ouderavond project: informatiewebsite over een school">
+                    <article>
+                        <p class="icon" aria-hidden="true">🏫</p>
+                        <h3>Ouderavond</h3>
+                        <p>Informatiewebsite over de school waar ik naartoe ga, met details over opleidingen en contact.</p>
+                    </article>
+                </a>
+                <a href="../Keuzedeel/Project 2/index.html" aria-label="Bekijk het Bankieren-app project: een gesimuleerde bankieromgeving">
+                    <article>
+                        <p class="icon" aria-hidden="true">🏦</p>
+                        <h3>Bankieren-app</h3>
+                        <p>Applicatie die een eenvoudige bankieromgeving simuleert met saldo en transacties.</p>
+                    </article>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="dark" aria-labelledby="contact-titel">
+            <h2 id="contact-titel">Contact</h2>
+            <div class="grid">
+                <article>
+                    <h3>Contact-informatie</h3>
+                    <p><a href="mailto:alanzurynski05@gmail.com">alanzurynski05@gmail.com</a></p>
+                    <p>Nederland</p>
+                    <p><a href="https://linkedin.com/in/alan-zurynski-5603743bb" target="_blank" rel="noopener noreferrer">linkedin.com/in/alan-zurynski</a></p>
+                    <p><a href="https://github.com/AlanZurynski" target="_blank" rel="noopener noreferrer">github.com/AlanZurynski</a></p>
+                </article>
+                <article>
+                    <h3>Contact-formulier</h3>
+                    <form action="#" method="post">
+                        <label for="naam">Naam</label>
+                        <input type="text" id="naam" name="naam" placeholder="Jouw naam" required autocomplete="name">
+
+                        <label for="email">E-mailadres</label>
+                        <input type="email" id="email" name="email" placeholder="jouw@email.nl" required autocomplete="email">
+
+                        <label for="bericht">Bericht</label>
+                        <textarea id="bericht" name="bericht" rows="4" placeholder="Schrijf hier je bericht..." required></textarea>
+
+                        <button type="submit">Verstuur bericht</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Alan Żuryński &copy; 2026</p>
+        <nav aria-label="Voetnoot navigatie">
+            <a href="#kennis">Kennis</a>
+            <a href="#opleidingen">Opleidingen</a>
+            <a href="#projecten">Projecten</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
